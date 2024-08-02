@@ -7,19 +7,26 @@ import Error from './Pages/Error'
 import About from './Pages/About'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import '@fontsource/montserrat'
+import styled from 'styled-components'
 
+const FontStyle = styled.div`
+  font-family: 'Montserrat';
+`
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/stays/:idStay" element={<Stays />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-      <Footer />
+      <FontStyle>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/stays/:idStay" element={<Stays />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+        <Footer />
+      </FontStyle>
     </Router>
   </React.StrictMode>
 )

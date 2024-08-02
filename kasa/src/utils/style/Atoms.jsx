@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom'
 
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 export const StyledLink = styled(Link)`
   padding: 10px 15px;
   text-decoration: none;
-  font-size: 18px;
-  text-align: center;`
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  color: black;
+  &:hover {
+  text-decoration: underline;
+  }
+`
