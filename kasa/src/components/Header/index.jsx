@@ -1,22 +1,18 @@
-import styled from 'styled-components'
 import logo from '../../assets/logo.png'
-import { StyledLink } from '../../utils/style/Atoms'
-
-const NavContainer = styled.nav`
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <NavContainer>
-      <img src={logo} alt="logo" />
-      <nav>
-        <StyledLink to="/">Accueil</StyledLink>
-        <StyledLink to="/about">A Propos</StyledLink>
+    <div className="header">
+      <img src={logo} alt="logo" className="header__logo" />
+      <nav className="header__nav">
+        <Link to="/" className="header__nav--link">
+          Accueil
+        </Link>
+        <Link to="/about" className="header__nav--link">
+          A Propos
+        </Link>
       </nav>
-    </NavContainer>
+    </div>
   )
 }
