@@ -1,12 +1,12 @@
 .cardContainer {
-  background-color: #f6f6f6;
-  width: 90%;
+  background-color: $color-secondary;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 0 auto;
   border-radius: 20px;
   padding: 30px;
+  margin: $margingap;
+  max-width: $wmax;
 }
 // A DEPLACER ITS
 
@@ -29,7 +29,7 @@
     position: absolute;
     left: 20px;
     bottom: 20px;
-    color: white;
+    color: $color-title;
     font-size: 18px;
     font-weight: 700;
   }

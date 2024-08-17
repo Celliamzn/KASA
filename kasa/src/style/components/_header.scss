@@ -1,6 +1,7 @@
 .header {
-  @include padding-top-bot;
   @include flex-between;
+  margin: $margingap;
+  max-width: $wmax;
   &__nav {
     &--link {
       padding: 10px 15px;

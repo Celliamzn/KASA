@@ -1,22 +1,27 @@
 import { useState } from 'react'
-
-import '@fortawesome/fontawesome-free/js/all.js'
+import { GoChevronUp } from 'react-icons/go'
 
 export default function Collapse({ title, text }) {
-  const [open, setOPen] = useState(false)
+  const [open, setOpen] = useState(false)
   const toggle = () => {
-    setOPen(!open)
+    setOpen(!open)
   }
 
   return (
     <div className="collapse">
-      <button className="collapse__title" onClick={toggle}>
-        <>
+      <button className="collapse__btn" onClick={toggle}>
+        <h2 className="collapse__title">
           {title}
-          <i class="fa-solid fa-chevron-up"></i>
-        </>
+          <GoChevronUp
+            className={`collapse__title--chevron ${open ? 'active' : ''}`}
+          />
+        </h2>
       </button>
-      {open && <div className="collapse__text">{text}</div>}
+      {open && (
+        <div className="collapse__textContainer">
+          <p className="collapse__textContainer">{text}</p>
+        </div>
+      )}
     </div>
   )
 }
