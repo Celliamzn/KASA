@@ -3,7 +3,7 @@ export default function Card({ cover, title }) {
 		<div>
 			<img className='card__img' src={cover} alt={`${title} cover`} />
 			<div className='card__gradient'></div>
-			<span className='card__title'>{title}</span>
+			<h2 className='card__title'>{title}</h2>
 		</div>
 	)
 }

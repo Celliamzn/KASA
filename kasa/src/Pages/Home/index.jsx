@@ -1,20 +1,12 @@
 import imageBanner from '../../assets/img/IMG.png'
 import Banner from '../../components/Banner'
-import Card from '../../components/Card'
-import locations from '../../assets/data/locations.json'
+import Gallery from '../../components/Gallery'
 
 export default function Home() {
   return (
     <div>
       <Banner img={imageBanner} text="Chez vous, partout et ailleurs" />
-      <div className="cardContainer">
-          {locations.map(({ id, cover, title }) => (
-            <div key={id} className='card'>
-              <Card cover={cover} title={title} />
-            </div>
-          ))}
-          <div className='card'></div>
-      </div>
+      <Gallery />
     </div>
   )
 }

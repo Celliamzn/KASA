@@ -1,0 +1,13 @@
+.gallery {
+  background-color: $color-secondary;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+  row-gap: 30px;
+  column-gap: 55px;
+  border-radius: 20px;
+  padding: 55px 0;
+  margin: $margingap;
+  max-width: $wmax;
+}
