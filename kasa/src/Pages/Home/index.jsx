@@ -1,7 +1,7 @@
-import imageBanner from '../../assets/IMG.png'
+import imageBanner from '../../assets/img/IMG.png'
 import Banner from '../../components/Banner'
 import Card from '../../components/Card'
-import locations from '../../locations/locations.json'
+import locations from '../../assets/data/locations.json'
 
 export default function Home() {
   return (

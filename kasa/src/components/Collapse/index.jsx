@@ -1,8 +1,20 @@
-import { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { GoChevronUp } from 'react-icons/go'
 
 export default function Collapse({ title, text }) {
   const [open, setOpen] = useState(false)
+  const textRef = useRef(null)
+
+  useEffect(() => {
+    if (open) {
+      textRef.current.style.height = `${textRef.current.scrollHeight}px`
+      textRef.current.style.padding = '15px 20px'
+    } else {
+      textRef.current.style.height = '0'
+      textRef.current.style.padding = '0 20px'
+    }
+  }, [open, textRef])
+
   const toggle = () => {
     setOpen(!open)
   }
@@ -17,11 +29,10 @@ export default function Collapse({ title, text }) {
           />
         </h2>
       </button>
-      {open && (
-        <div className="collapse__textContainer">
-          <p className="collapse__textContainer">{text}</p>
+    
+        <div className="collapse__textContainer" ref={textRef}>
+          {text}
         </div>
-      )}
     </div>
   )
 }

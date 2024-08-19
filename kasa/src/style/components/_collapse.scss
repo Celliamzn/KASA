@@ -1,25 +1,33 @@
 .collapse {
-  margin: 10px auto;
+  margin: 30px auto;
   width: 1023px;
   &__btn {
     background-color: $color-primary;
     border: none;
     color: $color-title;
-    border-radius: 3px;
+    border-radius: 10px;
     width: 100%;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   &__title {
     @include flex-between;
+    margin: 5px;
+    font-weight: 700;
+    font-size: 24px;
     &--chevron {
-      transition: .5s ease-in-out;
+      width: 40px;
+      height: 40px;
+      transition: 0.4s ease;
       &.active {
         rotate: -180deg;
       }
     }
   }
   &__textContainer {
+    overflow: hidden;
     background-color: $color-secondary;
-    transition: height .7s ease-in-out;
+    border-radius: 0 0 10px 10px;
+    transition: height 0.3s ease, padding 0.3s ease;
   }
 }
