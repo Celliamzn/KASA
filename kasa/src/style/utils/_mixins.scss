@@ -5,3 +5,14 @@
   align-items: center;
 }
 
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin font ($size, $weight) {
+font-size: $size;
+font-weight: $weight;
+}

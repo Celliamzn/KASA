@@ -1,0 +1,21 @@
+.error {
+  text-align: center;
+  color: $color-primary;
+  @include flex-center;
+
+  &__title {
+    @include font(288px, 700);
+    margin: $marginbiggap;
+  }
+  &__text {
+    @include font(36px, 500);
+    margin: $marginbiggap;
+  }
+  &__link {
+    @include font(18px, 500);
+    margin: $marginbiggap;
+    &:visited {
+      color: black;
+    }
+  }
+}
