@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
-import Stays from './Pages/Stays'
+import Stays from './Pages/Location'
 import Error from './Pages/Error'
 import About from './Pages/About'
 import Header from './components/Header'
@@ -16,7 +16,7 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/stays/:idStay" element={<Stays />} />
+        <Route path="/location/:id" element={<Stays />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>

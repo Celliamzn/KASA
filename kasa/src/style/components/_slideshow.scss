@@ -1,0 +1,52 @@
+.slideshow {
+  max-height: 415px;
+  max-width: 1240px;
+  display: flex;
+  position: relative;
+  margin: auto;
+  
+  &__loader {
+    min-height: 415px;
+    &--loading {
+      font-size: 80px;
+      color: $color-primary;
+    }
+  }
+  &__slider {
+    &--image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      @media screen and (max-width: $breakpoint-desktop) {
+        height: 255px;
+        width: 100%;
+      }
+    }
+    &--number {
+      color: $color-title;
+      font-weight: 500;
+      position: relative;
+      left: 50%;
+      bottom: 50px;
+    }
+  }
+}
+
+.displayNone {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+.ChevronLeft {
+  @include chevron;
+
+}
+
+.ChevronRight {
+  @include chevron;
+  right: 0;
+}

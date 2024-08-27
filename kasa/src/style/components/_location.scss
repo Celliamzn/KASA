@@ -1,0 +1,21 @@
+.collapses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 86px;
+  max-width: $wmax;
+  margin: auto;
+  @media screen and (max-width: $breakpoint-desktop) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  &__collapse {
+    @media screen and (max-width: $breakpoint-desktop) {
+      margin: 10px 0;
+    }
+    width: 100%;
+    &--equipment {
+      margin: 0;
+    }
+  }
+}

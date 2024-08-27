@@ -2,15 +2,37 @@
   @include flex-between;
   margin: $margingap;
   max-width: $wmax;
+  min-width: $wmin;
+
+  @media screen and (max-width: $breakpoint-desktop) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 15px;
+  }
+  &__logo {
+    @media screen and (max-width: $breakpoint-desktop) {
+      max-width: 145px;
+    }
+  }
+
   &__nav {
+    @media screen and (max-width: $breakpoint-desktop) {
+    }
+
     &--link {
       padding: 10px 15px;
       text-decoration: none;
       font-weight: 500;
       font-size: 24px;
       color: black;
+
       &:hover {
         text-decoration: underline;
+      }
+
+      @media screen and (max-width: $breakpoint-desktop) {
+        text-transform: uppercase;
+        font-size: 12px;
       }
     }
   }

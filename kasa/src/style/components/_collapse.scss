@@ -1,6 +1,6 @@
 .collapse {
   margin: 30px auto;
-  width: 1023px;
+  max-width: 1023px;
   &__btn {
     background-color: $color-primary;
     border: none;
@@ -15,10 +15,17 @@
     margin: 5px;
     font-weight: 700;
     font-size: 24px;
+    @media screen and (max-width: $breakpoint-desktop) {
+     font-size: 13px;
+     height: 18px;
+    }
     &--chevron {
       width: 40px;
       height: 40px;
       transition: 0.4s ease;
+      @media screen and (max-width: $breakpoint-desktop) {
+        height: 30px;
+       }
       &.active {
         rotate: -180deg;
       }
@@ -28,6 +35,7 @@
     overflow: hidden;
     background-color: $color-secondary;
     border-radius: 0 0 10px 10px;
+    font-size: 18px;
     transition: height 0.3s ease, padding 0.3s ease;
   }
 }

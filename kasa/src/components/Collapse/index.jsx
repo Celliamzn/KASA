@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { GoChevronUp } from 'react-icons/go'
 
-export default function Collapse({ title, text }) {
+export default function Collapse({ title, text, className }) {
   const [open, setOpen] = useState(false)
   const textRef = useRef(null)
 
@@ -20,7 +20,7 @@ export default function Collapse({ title, text }) {
   }
 
   return (
-    <div className="collapse">
+    <div className={`collapse ${className ? className : ''}`}>
       <button className="collapse__btn" onClick={toggle}>
         <h2 className="collapse__title">
           {title}

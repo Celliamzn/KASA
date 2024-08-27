@@ -16,3 +16,24 @@
 font-size: $size;
 font-weight: $weight;
 }
+
+@mixin chevron {
+  position: absolute;
+  top: 35%;
+  height: 120px;
+  width: 97px;
+  color: $color-title;
+  @media screen and (max-width: $breakpoint-desktop) {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@mixin star {
+  width:24px;
+  height: 24px;
+  margin: 3px;
+  @media screen and (max-width: $breakpoint-desktop) {
+   width: 18px;
+  height: 18px;  }
+}
