@@ -19,12 +19,11 @@ font-weight: $weight;
 
 @mixin chevron {
   position: absolute;
-  top: 35%;
-  height: 120px;
+  height: 100%;
   width: 97px;
   color: $color-title;
+  cursor: pointer;
   @media screen and (max-width: $breakpoint-desktop) {
-    height: 40px;
     width: 40px;
   }
 }

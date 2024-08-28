@@ -31,7 +31,7 @@ export default function Location() {
         />
         <Collapse
           className="collapses__collapse"
-          title="Equipements"
+          title="Équipements"
           text={location.equipments.map((equipment) => (
             <p key={equipment} className="collapses__collapse--equipment">{equipment}</p>
           ))}

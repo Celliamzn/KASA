@@ -8,13 +8,18 @@ export default function Slideshow({ images }) {
 
   const nextImage = () => {
     setLoading(true)
-    setImageIndex(imageIndex === length - 1 ? 0 : imageIndex + 1)
-  }
+    setTimeout(() => {
+      setImageIndex((prevIndex) => (prevIndex === length - 1 ? 0 : prevIndex + 1));
+    }, 500); // Délai correspondant à la durée de la transition CSS
+  };
 
   const prevImage = () => {
     setLoading(true)
-    setImageIndex(imageIndex === 0 ? length - 1 : imageIndex - 1)
-  }
+    setTimeout(() => {
+      setImageIndex((prevIndex) => (prevIndex === 0 ? length - 1 : prevIndex - 1));
+    }, 500); // Délai correspondant à la durée de la transition CSS
+  };
+  
   const handleImageLoad = () => {
     setLoading(false);
   };
@@ -38,7 +43,7 @@ export default function Slideshow({ images }) {
             {index === imageIndex && (
               <>
               {loading && (<div className="slideshow__loader">
-                  {/* Ici, vous pouvez ajouter une animation de chargement, par exemple un spinner */}
+                  {/* TRANISITION IMAGE CSS */}
                   <p className="slideshow__loader--loading">Loading...</p>
                 </div>) }
                 <img
