@@ -1,8 +1,7 @@
 .banner {
-  @include flex-between;
+  @include flex-center;
   margin: $margingap;
   max-width: $wmax;
-  justify-content: center;
   position: relative;
   @media screen and (max-width: $breakpoint-desktop) {
     margin: 0 10px;
@@ -21,18 +20,13 @@
   &__text {
     position: absolute;
     color: $color-title;
-    font-size: 48px;
-    font-weight: 700;
+    @include font(48px, 700);
     text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
       1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
-      @media screen and (max-width: $breakpoint-desktop) {
+    @media screen and (max-width: $breakpoint-desktop) {
       font-size: 24px;
       text-shadow: none;
       margin-left: 5px;
-      }
-      &--mobilebr {
-        display: block;
-      }
     }
   }
-
+}

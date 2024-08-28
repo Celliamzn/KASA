@@ -1,5 +1,3 @@
-
-
 export default function Banner({img, text}) {
     return (
       <div className="banner">

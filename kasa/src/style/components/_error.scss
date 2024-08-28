@@ -6,6 +6,7 @@
   &__title {
     @include font(288px, 700);
     margin: $marginbiggap;
+
     @media screen and (max-width: $breakpoint-desktop) {
       font-size: 96px;
     }
@@ -13,6 +14,7 @@
   &__text {
     @include font(36px, 500);
     margin: $marginbiggap;
+
     @media screen and (max-width: $breakpoint-desktop) {
       font-size: 18px;
     }
@@ -20,6 +22,7 @@
   &__link {
     @include font(18px, 500);
     margin: $marginbiggap;
+    
     @media screen and (max-width: $breakpoint-desktop) {
       font-size: 14px;
     }

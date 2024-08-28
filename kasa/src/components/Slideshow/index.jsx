@@ -9,20 +9,24 @@ export default function Slideshow({ images }) {
   const nextImage = () => {
     setLoading(true)
     setTimeout(() => {
-      setImageIndex((prevIndex) => (prevIndex === length - 1 ? 0 : prevIndex + 1));
-    }, 500); // Délai correspondant à la durée de la transition CSS
-  };
+      setImageIndex((prevIndex) =>
+        prevIndex === length - 1 ? 0 : prevIndex + 1
+      )
+    }, 500)
+  }
 
   const prevImage = () => {
     setLoading(true)
     setTimeout(() => {
-      setImageIndex((prevIndex) => (prevIndex === 0 ? length - 1 : prevIndex - 1));
-    }, 500); // Délai correspondant à la durée de la transition CSS
-  };
-  
+      setImageIndex((prevIndex) =>
+        prevIndex === 0 ? length - 1 : prevIndex - 1
+      )
+    }, 500)
+  }
+
   const handleImageLoad = () => {
-    setLoading(false);
-  };
+    setLoading(false)
+  }
 
   return (
     <section className="slideshow">
@@ -42,18 +46,20 @@ export default function Slideshow({ images }) {
           >
             {index === imageIndex && (
               <>
-              {loading && (<div className="slideshow__loader">
-                  {/* TRANISITION IMAGE CSS */}
-                  <p className="slideshow__loader--loading">Loading...</p>
-                </div>) }
+                {loading && (
+                  <div className="slideshow__loader">
+                    <p className="slideshow__loader--loading">Loading...</p>
+                  </div>
+                )}
                 <img
-                src={image}
-                alt="appartement"
-                className={`slideshow__slider--image ${loading ? `displayNone` : `display`}`}
-                onLoad={handleImageLoad}
-              />
-      </>
-             
+                  src={image}
+                  alt="appartement"
+                  className={`slideshow__slider--image ${
+                    loading ? `displayNone` : `display`
+                  }`}
+                  onLoad={handleImageLoad}
+                />
+              </>
             )}
             {index === imageIndex && length > 1 && (
               <span className="slideshow__slider--number">
