@@ -19,7 +19,7 @@ export default function LocationResume({
           src={host.picture}
           alt="host"
           className="resume__host--img"
-        ></img>{' '}
+        ></img>
       </div>
 
       <div className="resume__tag">

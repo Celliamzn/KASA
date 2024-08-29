@@ -8,20 +8,12 @@ export default function Slideshow({ images }) {
 
   const nextImage = () => {
     setLoading(true)
-    setTimeout(() => {
-      setImageIndex((prevIndex) =>
-        prevIndex === length - 1 ? 0 : prevIndex + 1
-      )
-    }, 500)
+    setImageIndex((prevIndex) => (prevIndex === length - 1 ? 0 : prevIndex + 1))
   }
 
   const prevImage = () => {
     setLoading(true)
-    setTimeout(() => {
-      setImageIndex((prevIndex) =>
-        prevIndex === 0 ? length - 1 : prevIndex - 1
-      )
-    }, 500)
+    setImageIndex((prevIndex) => (prevIndex === 0 ? length - 1 : prevIndex - 1))
   }
 
   const handleImageLoad = () => {
@@ -31,10 +23,10 @@ export default function Slideshow({ images }) {
   return (
     <section className="slideshow">
       {length > 1 && (
-        <GoChevronLeft className="ChevronLeft" onClick={prevImage} />
-      )}
-      {length > 1 && (
-        <GoChevronRight className="ChevronRight" onClick={nextImage} />
+        <>
+          <GoChevronLeft className="ChevronLeft" onClick={prevImage} />
+          <GoChevronRight className="ChevronRight" onClick={nextImage} />
+        </>
       )}
       {images?.map((image, index) => {
         return (

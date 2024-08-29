@@ -29,10 +29,10 @@ export default function Collapse({ title, text, className }) {
           />
         </h2>
       </button>
-    
-        <div className="collapse__textContainer" ref={textRef}>
-          {text}
-        </div>
+
+      <div className="collapse__textContainer" ref={textRef}>
+        {text}
+      </div>
     </div>
   )
 }

@@ -9,9 +9,7 @@ export default function Location() {
   const { id } = useParams()
   const location = locations.find((location) => location.id === id)
   if (!location) {
-    return (
-        <Error />
-    )
+    return <Error />
   }
   return (
     <>
@@ -33,10 +31,12 @@ export default function Location() {
           className="collapses__collapse"
           title="Équipements"
           text={location.equipments.map((equipment) => (
-            <p key={equipment} className="collapses__collapse--equipment">{equipment}</p>
+            <p key={equipment} className="collapses__collapse--equipment">
+              {equipment}
+            </p>
           ))}
         />
-      </div>{' '}
+      </div>
     </>
   )
 }

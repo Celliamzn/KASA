@@ -3,7 +3,6 @@ import locations from '../../assets/data/locations.json'
 import { Link } from 'react-router-dom'
 
 export default function Gallery() {
-
   return (
     <div className="gallery">
       {locations.map(({ id, cover, title }) => (
